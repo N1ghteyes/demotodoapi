@@ -1,0 +1,8 @@
+settings:
+  displayErrorDetails: 1
+  addContentLengthHeader: false
+  database:
+    host: localhost
+    user: todolist
+    pass: mihkD6rSiYHAOht7
+    name: todolist

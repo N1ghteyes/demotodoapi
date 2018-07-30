@@ -1,0 +1,12 @@
+{
+    "name": "acme/todo-api",
+    "type": "project",
+    "require": {
+        "slim/slim": "^3.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "TodoApi\\": "./src"
+        }
+    }
+}

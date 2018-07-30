@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "7558baae-d935-4f2b-84ba-99142183aa9b",
+		"name": "TodoList API",
+		"description": "Simple Todo List API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "172783bb-1f3c-4a49-a4a0-86bc1a2405f0",
+			"name": "List API Calls",
+			"item": [
+				{
+					"_postman_id": "6760a549-24be-4222-aa64-fe71efb408d6",
+					"name": "Get All Lists",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"{{$guid}}\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/list",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "43021b8e-9bd9-499e-8da0-5cb8cb76a99e",
+					"name": "Create a new list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"{{$guid}}\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/list?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"list"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "a2e063a5-2f40-4804-8096-0c80e78bf76b",
+					"name": "Get Todo List by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/list/9",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"list",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "9f7f57ab-ca7c-40c8-8a32-4bbf38ef5485",
+					"name": "Update Todo List",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"{{$guid}}\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/list/8",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"list",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "482479e3-cf36-4bf6-860b-e6945f62ab89",
+					"name": "Delete Todo List",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/list/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"list",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "8ee159ab-5668-496a-a7d8-7fccd986a29b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "0a8fbaf7-9193-4360-9e2e-b766912db55c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"_postman_id": "a47f117d-9843-4338-bdb5-11fce81cadf6",
+			"name": "Item API Calls",
+			"item": [
+				{
+					"_postman_id": "8686b34f-2dad-4785-80bf-b78c7c8a7ec9",
+					"name": "Get all Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "c1bdb232-bb59-422d-8684-8206fc68ac42",
+					"name": "Create a new Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"listId\": 1,\n\t\"description\": \"Another Item for the Todo List\",\n\t\"dueDate\": 1532904748,\n\t\"isCompleted\": false\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/item?XDEBUG_SESSION_START=PHPSTORM",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item"
+							],
+							"query": [
+								{
+									"key": "XDEBUG_SESSION_START",
+									"value": "PHPSTORM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "becfa304-0aa4-4962-9e8b-81ba8f969283",
+					"name": "Get item by ListID/ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item/1/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "001c71d1-ddce-410b-9919-2b073cfad7fe",
+					"name": "Get all items in a List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "860b28e5-4ca4-4a41-aa55-eab591073613",
+					"name": "Update Item by ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"listId\": 1,\n\t\"description\": \"An updated Item for the Todo List\",\n\t\"dueDate\": 1532904748,\n\t\"isCompleted\": true\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/item/5",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "61500164-1abd-44db-8736-22bd31a37be7",
+					"name": "Delete Item by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "ce22a4d6-a48e-4ea5-b52b-2ec095ec7fe8",
+					"name": "Get Overdue Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item/overdue",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"overdue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"_postman_id": "09696633-6fe2-46c7-8e8c-39cd48e78c3b",
+					"name": "Get Items by Status (1 or 0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/item/status/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"item",
+								"status",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
